@@ -1,0 +1,886 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InstrumentService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IInstrumentService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInstrumentService_GetFavoriteReportCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteReportCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetFavoriteReportCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteReportCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetShowColumnsData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowColumnsData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetShowColumnsData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetShowColumnsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_IsUniqueFavoriteName_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsUniqueFavoriteName" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_IsUniqueFavoriteName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsUniqueFavoriteNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetRDReportCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRDReportCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetRDReportCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRDReportCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetRDData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRDData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetRDData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRDDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetSpectralFileData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpectralFileData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetSpectralFileData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpectralFileDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetControlReportCriteriaData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetControlReportCriteriaData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetControlReportCriteriaData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetControlReportCriteriaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetControlChartData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetControlChartData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetControlChartData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetControlChartDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetResultBySampleId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultBySampleId" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetResultBySampleId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultBySampleIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetErrorLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetErrorLog" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetErrorLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetErrorLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetUpdateInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateInfo" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetUpdateInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetTransactionMonitorData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionMonitorData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetTransactionMonitorData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionMonitorDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_ExecSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecSql" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_ExecSql_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_UpdateLoginTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoginTime" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_UpdateLoginTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoginTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetSyncData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSyncData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetSyncData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSyncDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_RefreshQLinkCoreTables_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshQLinkCoreTables" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_RefreshQLinkCoreTables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshQLinkCoreTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_RefreshQLinkSupportTables2_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshQLinkSupportTables2" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_RefreshQLinkSupportTables2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshQLinkSupportTables2Response" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_RefreshQLinkSupportTables_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshQLinkSupportTables" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_RefreshQLinkSupportTables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshQLinkSupportTablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_UpdateSyncStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSyncStatus" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_UpdateSyncStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSyncStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetAlerts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlerts" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetAlerts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAlertsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_SendDataForAnalysis_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendDataForAnalysis" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_SendDataForAnalysis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendDataForAnalysisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetResultStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultStatus" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetResultStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetResultError_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultError" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetResultError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResult" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_DeleteResult_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResult" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_DeleteResult_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_LogError_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogError" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_LogError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_LogErrorwithApplicationName_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogErrorwithApplicationName" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_LogErrorwithApplicationName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogErrorwithApplicationNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetHelpUrl_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHelpUrl" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetHelpUrl_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHelpUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetSAReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSAReport" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetSAReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSAReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetCOAReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCOAReport" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetCOAReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCOAReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetTrendReportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrendReportData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetTrendReportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrendReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetTestCountReportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestCountReportData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetTestCountReportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestCountReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetSampleCountReportData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSampleCountReportData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetSampleCountReportData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSampleCountReportDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetTrendReportCriteriaData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrendReportCriteriaData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetTrendReportCriteriaData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTrendReportCriteriaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetTestCountReportCriteriaData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestCountReportCriteriaData" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetTestCountReportCriteriaData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestCountReportCriteriaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_AuthenticateToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateToken" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_AuthenticateToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_CreateAuthenticateToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAuthenticateToken" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_CreateAuthenticateToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAuthenticateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_UpdateUserReportHeader_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserReportHeader" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_UpdateUserReportHeader_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserReportHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetHistoricalReportRowCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricalReportRowCount" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetHistoricalReportRowCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHistoricalReportRowCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_CreateFavoriteReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFavoriteReport" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_CreateFavoriteReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFavoriteReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_UpdateFavoriteReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFavoriteReport" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_UpdateFavoriteReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFavoriteReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_DeleteFavoriteReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavoriteReport" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_DeleteFavoriteReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavoriteReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetFavoriteReports_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteReports" />
+  </wsdl:message>
+  <wsdl:message name="IInstrumentService_GetFavoriteReports_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFavoriteReportsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInstrumentService">
+    <wsdl:operation name="GetFavoriteReportCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetFavoriteReportCriteria" message="tns:IInstrumentService_GetFavoriteReportCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetFavoriteReportCriteriaResponse" message="tns:IInstrumentService_GetFavoriteReportCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetShowColumnsData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetShowColumnsData" message="tns:IInstrumentService_GetShowColumnsData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetShowColumnsDataResponse" message="tns:IInstrumentService_GetShowColumnsData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUniqueFavoriteName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/IsUniqueFavoriteName" message="tns:IInstrumentService_IsUniqueFavoriteName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/IsUniqueFavoriteNameResponse" message="tns:IInstrumentService_IsUniqueFavoriteName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRDReportCriteria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetRDReportCriteria" message="tns:IInstrumentService_GetRDReportCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetRDReportCriteriaResponse" message="tns:IInstrumentService_GetRDReportCriteria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRDData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetRDData" message="tns:IInstrumentService_GetRDData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetRDDataResponse" message="tns:IInstrumentService_GetRDData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpectralFileData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetSpectralFileData" message="tns:IInstrumentService_GetSpectralFileData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetSpectralFileDataResponse" message="tns:IInstrumentService_GetSpectralFileData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetControlReportCriteriaData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetControlReportCriteriaData" message="tns:IInstrumentService_GetControlReportCriteriaData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetControlReportCriteriaDataResponse" message="tns:IInstrumentService_GetControlReportCriteriaData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetControlChartData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetControlChartData" message="tns:IInstrumentService_GetControlChartData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetControlChartDataResponse" message="tns:IInstrumentService_GetControlChartData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultBySampleId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetResultBySampleId" message="tns:IInstrumentService_GetResultBySampleId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetResultBySampleIdResponse" message="tns:IInstrumentService_GetResultBySampleId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetErrorLog" message="tns:IInstrumentService_GetErrorLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetErrorLogResponse" message="tns:IInstrumentService_GetErrorLog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetUpdateInfo" message="tns:IInstrumentService_GetUpdateInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetUpdateInfoResponse" message="tns:IInstrumentService_GetUpdateInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionMonitorData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetTransactionMonitorData" message="tns:IInstrumentService_GetTransactionMonitorData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetTransactionMonitorDataResponse" message="tns:IInstrumentService_GetTransactionMonitorData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/ExecSql" message="tns:IInstrumentService_ExecSql_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/ExecSqlResponse" message="tns:IInstrumentService_ExecSql_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/AuthenticateUser" message="tns:IInstrumentService_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/AuthenticateUserResponse" message="tns:IInstrumentService_AuthenticateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoginTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/UpdateLoginTime" message="tns:IInstrumentService_UpdateLoginTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/UpdateLoginTimeResponse" message="tns:IInstrumentService_UpdateLoginTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/ChangePassword" message="tns:IInstrumentService_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/ChangePasswordResponse" message="tns:IInstrumentService_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSyncData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetSyncData" message="tns:IInstrumentService_GetSyncData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetSyncDataResponse" message="tns:IInstrumentService_GetSyncData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshQLinkCoreTables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/RefreshQLinkCoreTables" message="tns:IInstrumentService_RefreshQLinkCoreTables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/RefreshQLinkCoreTablesResponse" message="tns:IInstrumentService_RefreshQLinkCoreTables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshQLinkSupportTables2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/RefreshQLinkSupportTables2" message="tns:IInstrumentService_RefreshQLinkSupportTables2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/RefreshQLinkSupportTables2Response" message="tns:IInstrumentService_RefreshQLinkSupportTables2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshQLinkSupportTables">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/RefreshQLinkSupportTables" message="tns:IInstrumentService_RefreshQLinkSupportTables_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/RefreshQLinkSupportTablesResponse" message="tns:IInstrumentService_RefreshQLinkSupportTables_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSyncStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/UpdateSyncStatus" message="tns:IInstrumentService_UpdateSyncStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/UpdateSyncStatusResponse" message="tns:IInstrumentService_UpdateSyncStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlerts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetAlerts" message="tns:IInstrumentService_GetAlerts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetAlertsResponse" message="tns:IInstrumentService_GetAlerts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendDataForAnalysis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/SendDataForAnalysis" message="tns:IInstrumentService_SendDataForAnalysis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/SendDataForAnalysisResponse" message="tns:IInstrumentService_SendDataForAnalysis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetResultStatus" message="tns:IInstrumentService_GetResultStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetResultStatusResponse" message="tns:IInstrumentService_GetResultStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResultError">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetResultError" message="tns:IInstrumentService_GetResultError_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetResultErrorResponse" message="tns:IInstrumentService_GetResultError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetResult" message="tns:IInstrumentService_GetResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetResultResponse" message="tns:IInstrumentService_GetResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResult">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/DeleteResult" message="tns:IInstrumentService_DeleteResult_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/DeleteResultResponse" message="tns:IInstrumentService_DeleteResult_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogError">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/LogError" message="tns:IInstrumentService_LogError_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/LogErrorResponse" message="tns:IInstrumentService_LogError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogErrorwithApplicationName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/LogErrorwithApplicationName" message="tns:IInstrumentService_LogErrorwithApplicationName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/LogErrorwithApplicationNameResponse" message="tns:IInstrumentService_LogErrorwithApplicationName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHelpUrl">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetHelpUrl" message="tns:IInstrumentService_GetHelpUrl_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetHelpUrlResponse" message="tns:IInstrumentService_GetHelpUrl_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSAReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetSAReport" message="tns:IInstrumentService_GetSAReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetSAReportResponse" message="tns:IInstrumentService_GetSAReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCOAReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetCOAReport" message="tns:IInstrumentService_GetCOAReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetCOAReportResponse" message="tns:IInstrumentService_GetCOAReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrendReportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetTrendReportData" message="tns:IInstrumentService_GetTrendReportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetTrendReportDataResponse" message="tns:IInstrumentService_GetTrendReportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestCountReportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetTestCountReportData" message="tns:IInstrumentService_GetTestCountReportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetTestCountReportDataResponse" message="tns:IInstrumentService_GetTestCountReportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSampleCountReportData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetSampleCountReportData" message="tns:IInstrumentService_GetSampleCountReportData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetSampleCountReportDataResponse" message="tns:IInstrumentService_GetSampleCountReportData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTrendReportCriteriaData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetTrendReportCriteriaData" message="tns:IInstrumentService_GetTrendReportCriteriaData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetTrendReportCriteriaDataResponse" message="tns:IInstrumentService_GetTrendReportCriteriaData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTestCountReportCriteriaData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetTestCountReportCriteriaData" message="tns:IInstrumentService_GetTestCountReportCriteriaData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetTestCountReportCriteriaDataResponse" message="tns:IInstrumentService_GetTestCountReportCriteriaData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/AuthenticateToken" message="tns:IInstrumentService_AuthenticateToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/AuthenticateTokenResponse" message="tns:IInstrumentService_AuthenticateToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAuthenticateToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/CreateAuthenticateToken" message="tns:IInstrumentService_CreateAuthenticateToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/CreateAuthenticateTokenResponse" message="tns:IInstrumentService_CreateAuthenticateToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserReportHeader">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/UpdateUserReportHeader" message="tns:IInstrumentService_UpdateUserReportHeader_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/UpdateUserReportHeaderResponse" message="tns:IInstrumentService_UpdateUserReportHeader_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalReportRowCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetHistoricalReportRowCount" message="tns:IInstrumentService_GetHistoricalReportRowCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetHistoricalReportRowCountResponse" message="tns:IInstrumentService_GetHistoricalReportRowCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFavoriteReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/CreateFavoriteReport" message="tns:IInstrumentService_CreateFavoriteReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/CreateFavoriteReportResponse" message="tns:IInstrumentService_CreateFavoriteReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFavoriteReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/UpdateFavoriteReport" message="tns:IInstrumentService_UpdateFavoriteReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/UpdateFavoriteReportResponse" message="tns:IInstrumentService_UpdateFavoriteReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavoriteReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/DeleteFavoriteReport" message="tns:IInstrumentService_DeleteFavoriteReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/DeleteFavoriteReportResponse" message="tns:IInstrumentService_DeleteFavoriteReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteReports">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInstrumentService/GetFavoriteReports" message="tns:IInstrumentService_GetFavoriteReports_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInstrumentService/GetFavoriteReportsResponse" message="tns:IInstrumentService_GetFavoriteReports_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IInstrumentService" type="tns:IInstrumentService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IInstrumentService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFavoriteReportCriteria">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetFavoriteReportCriteria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetShowColumnsData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetShowColumnsData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUniqueFavoriteName">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/IsUniqueFavoriteName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRDReportCriteria">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetRDReportCriteria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRDData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetRDData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpectralFileData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetSpectralFileData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetControlReportCriteriaData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetControlReportCriteriaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetControlChartData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetControlChartData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultBySampleId">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetResultBySampleId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorLog">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetErrorLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdateInfo">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetUpdateInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionMonitorData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetTransactionMonitorData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecSql">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/ExecSql" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateUser">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/AuthenticateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoginTime">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/UpdateLoginTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSyncData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetSyncData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefreshQLinkCoreTables">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/RefreshQLinkCoreTables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefreshQLinkSupportTables2">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/RefreshQLinkSupportTables2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RefreshQLinkSupportTables">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/RefreshQLinkSupportTables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSyncStatus">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/UpdateSyncStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAlerts">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetAlerts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendDataForAnalysis">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/SendDataForAnalysis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultStatus">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetResultStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResultError">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetResultError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResult">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResult">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/DeleteResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogError">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/LogError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogErrorwithApplicationName">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/LogErrorwithApplicationName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHelpUrl">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetHelpUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSAReport">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetSAReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCOAReport">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetCOAReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrendReportData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetTrendReportData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestCountReportData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetTestCountReportData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSampleCountReportData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetSampleCountReportData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTrendReportCriteriaData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetTrendReportCriteriaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestCountReportCriteriaData">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetTestCountReportCriteriaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AuthenticateToken">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/AuthenticateToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAuthenticateToken">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/CreateAuthenticateToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserReportHeader">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/UpdateUserReportHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHistoricalReportRowCount">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetHistoricalReportRowCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFavoriteReport">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/CreateFavoriteReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFavoriteReport">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/UpdateFavoriteReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavoriteReport">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/DeleteFavoriteReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFavoriteReports">
+      <soap12:operation soapAction="http://tempuri.org/IInstrumentService/GetFavoriteReports" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InstrumentService">
+    <wsdl:port name="WSHttpBinding_IInstrumentService" binding="tns:WSHttpBinding_IInstrumentService">
+      <soap12:address location="http://com12terprd:8080/InstrumentServices/InstrumentService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://com12terprd:8080/InstrumentServices/InstrumentService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

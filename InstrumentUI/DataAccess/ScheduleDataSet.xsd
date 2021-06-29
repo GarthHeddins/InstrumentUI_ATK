@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ScheduleDataSet" targetNamespace="http://tempuri.org/ScheduleDataSet.xsd" xmlns:mstns="http://tempuri.org/ScheduleDataSet.xsd" xmlns="http://tempuri.org/ScheduleDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ScheduleDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ScheduleDataSet" msprop:Generator_DataSetName="ScheduleDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Schedule" msprop:Generator_UserTableName="Schedule" msprop:Generator_RowDeletedName="ScheduleRowDeleted" msprop:Generator_RowChangedName="ScheduleRowChanged" msprop:Generator_RowClassName="ScheduleRow" msprop:Generator_RowChangingName="ScheduleRowChanging" msprop:Generator_RowEvArgName="ScheduleRowChangeEvent" msprop:Generator_RowEvHandlerName="ScheduleRowChangeEventHandler" msprop:Generator_TableClassName="ScheduleDataTable" msprop:Generator_TableVarName="tableSchedule" msprop:Generator_RowDeletingName="ScheduleRowDeleting" msprop:Generator_TablePropName="Schedule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UserName" msprop:Generator_UserColumnName="UserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" type="xs:string" />
+              <xs:element name="LocationNumber" msprop:Generator_UserColumnName="LocationNumber" msprop:Generator_ColumnVarNameInTable="columnLocationNumber" msprop:Generator_ColumnPropNameInRow="LocationNumber" msprop:Generator_ColumnPropNameInTable="LocationNumberColumn" type="xs:short" />
+              <xs:element name="MaterialId" msprop:Generator_UserColumnName="MaterialId" msprop:Generator_ColumnVarNameInTable="columnMaterialId" msprop:Generator_ColumnPropNameInRow="MaterialId" msprop:Generator_ColumnPropNameInTable="MaterialIdColumn" type="xs:int" default="0" />
+              <xs:element name="UserField1" msprop:Generator_UserColumnName="UserField1" msprop:Generator_ColumnVarNameInTable="columnUserField1" msprop:Generator_ColumnPropNameInRow="UserField1" msprop:Generator_ColumnPropNameInTable="UserField1Column" type="xs:string" default="" />
+              <xs:element name="UserField2" msprop:Generator_UserColumnName="UserField2" msprop:Generator_ColumnVarNameInTable="columnUserField2" msprop:Generator_ColumnPropNameInRow="UserField2" msprop:Generator_ColumnPropNameInTable="UserField2Column" type="xs:string" default="" />
+              <xs:element name="ScansPerHour" msprop:Generator_UserColumnName="ScansPerHour" msprop:Generator_ColumnVarNameInTable="columnScansPerHour" msprop:Generator_ColumnPropNameInRow="ScansPerHour" msprop:Generator_ColumnPropNameInTable="ScansPerHourColumn" type="xs:short" default="0" />
+              <xs:element name="IsActive" msprop:Generator_UserColumnName="IsActive" msprop:Generator_ColumnPropNameInRow="IsActive" msprop:Generator_ColumnVarNameInTable="columnIsActive" msprop:Generator_ColumnPropNameInTable="IsActiveColumn" type="xs:boolean" default="false" />
+              <xs:element name="Material" msprop:Generator_UserColumnName="Material" msprop:Generator_ColumnVarNameInTable="columnMaterial" msprop:Generator_ColumnPropNameInRow="Material" msprop:Generator_ColumnPropNameInTable="MaterialColumn" type="xs:string" default="" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Schedule" />
+      <xs:field xpath="mstns:UserName" />
+      <xs:field xpath="mstns:LocationNumber" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

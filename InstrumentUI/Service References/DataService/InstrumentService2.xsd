@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://rsi-dev-mohinder.india.rsystems.com/InstrumentServicesHosted/InstrumentService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="EnumBool">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="YES" />
+      <xs:enumeration value="NO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumBool" nillable="true" type="tns:EnumBool" />
+  <xs:simpleType name="EnumResultStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNASSIGNED" />
+      <xs:enumeration value="ASSIGNED" />
+      <xs:enumeration value="SUCCESS" />
+      <xs:enumeration value="FAILURE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumResultStatus" nillable="true" type="tns:EnumResultStatus" />
+  <xs:simpleType name="EnumStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ACTIVE" />
+      <xs:enumeration value="DISABLED" />
+      <xs:enumeration value="TERMINATED" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumStatus" nillable="true" type="tns:EnumStatus" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company" nillable="true" type="tns:Company" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="tns:Location" />
+      <xs:element minOccurs="0" name="UserRole" nillable="true" type="tns:UserRole" />
+      <xs:element minOccurs="0" name="UserAccessibleSpectrometerType" nillable="true" type="tns:SpectrometerTypeDetail" />
+      <xs:element minOccurs="0" name="UserAccessibleTraits" nillable="true" type="tns:ArrayOfModelGroup" />
+      <xs:element minOccurs="0" name="UserAccessibleSampleClasses" nillable="true" type="tns:ArrayOfSampleClass" />
+      <xs:element minOccurs="0" name="UserAccessibleSampleTypes" nillable="true" type="tns:ArrayOfSampleType" />
+      <xs:element minOccurs="0" name="FullSync" type="tns:EnumBool" />
+      <xs:element minOccurs="0" name="BackgroundTTL" type="xs:int" />
+      <xs:element minOccurs="0" name="WarmParam" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CleanParam" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Status" type="tns:EnumStatus" />
+      <xs:element minOccurs="0" name="StatusDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="Company">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyId" type="xs:int" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Company" nillable="true" type="tns:Company" />
+  <xs:complexType name="Location">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LocationId" type="xs:int" />
+      <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Location" nillable="true" type="tns:Location" />
+  <xs:complexType name="UserRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserRole" nillable="true" type="tns:UserRole" />
+  <xs:complexType name="SpectrometerTypeDetail">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SpectrometerType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BackgroundFile" nillable="true" type="tns:BinaryFile" />
+          <xs:element minOccurs="0" name="WorkflowFile" nillable="true" type="tns:BinaryFile" />
+          <xs:element minOccurs="0" name="Macros" nillable="true" type="tns:ArrayOfBinaryFile" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SpectrometerTypeDetail" nillable="true" type="tns:SpectrometerTypeDetail" />
+  <xs:complexType name="SpectrometerType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SpectrometerTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="SpectrometerTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manufacturer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="tns:EnumStatus" />
+      <xs:element minOccurs="0" name="StatusDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpectrometerType" nillable="true" type="tns:SpectrometerType" />
+  <xs:complexType name="BinaryFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Type" type="tns:EnumFileType" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChangedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BinaryFile" nillable="true" type="tns:BinaryFile" />
+  <xs:simpleType name="EnumFileType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="XPM">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WF">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MACRO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumFileType" nillable="true" type="tns:EnumFileType" />
+  <xs:complexType name="ArrayOfBinaryFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BinaryFile" nillable="true" type="tns:BinaryFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBinaryFile" nillable="true" type="tns:ArrayOfBinaryFile" />
+  <xs:complexType name="ArrayOfModelGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ModelGroup" nillable="true" type="tns:ModelGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfModelGroup" nillable="true" type="tns:ArrayOfModelGroup" />
+  <xs:complexType name="ModelGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraitId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpectrometerTypeDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Material" nillable="true" type="tns:Material" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="tns:Category" />
+      <xs:element minOccurs="0" name="SubCategory" nillable="true" type="tns:SubCategory" />
+      <xs:element minOccurs="0" name="Presentation" nillable="true" type="tns:Presentation" />
+      <xs:element minOccurs="0" name="PredictionType" type="xs:int" />
+      <xs:element minOccurs="0" name="Calculated" type="xs:int" />
+      <xs:element minOccurs="0" name="CalculationInputs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HomogeneityCheck" type="tns:EnumBool" />
+      <xs:element minOccurs="0" name="ModelGroupStage" nillable="true" type="tns:ModelGroupStage" />
+      <xs:element minOccurs="0" name="XpmFile" nillable="true" type="tns:BinaryFile" />
+      <xs:element minOccurs="0" name="Status" type="tns:EnumStatus" />
+      <xs:element minOccurs="0" name="StatusDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ChangedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ChangedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayOrder" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModelGroup" nillable="true" type="tns:ModelGroup" />
+  <xs:complexType name="Material">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaterialId" type="xs:int" />
+      <xs:element minOccurs="0" name="MaterialName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaterialCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Material" nillable="true" type="tns:Material" />
+  <xs:complexType name="Category">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Category" nillable="true" type="tns:Category" />
+  <xs:complexType name="SubCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SubCategoryId" type="xs:int" />
+      <xs:element minOccurs="0" name="SubCategoryName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubCategory" nillable="true" type="tns:SubCategory" />
+  <xs:complexType name="Presentation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PresentationId" type="xs:int" />
+      <xs:element minOccurs="0" name="PresentationName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Presentation" nillable="true" type="tns:Presentation" />
+  <xs:complexType name="ModelGroupStage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ModelGroupStageId" type="xs:int" />
+      <xs:element minOccurs="0" name="ModelGroupStageName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ModelGroupStage" nillable="true" type="tns:ModelGroupStage" />
+  <xs:complexType name="ArrayOfSampleClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SampleClass" nillable="true" type="tns:SampleClass" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSampleClass" nillable="true" type="tns:ArrayOfSampleClass" />
+  <xs:complexType name="SampleClass">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="SampleClassName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SampleClass" nillable="true" type="tns:SampleClass" />
+  <xs:complexType name="ArrayOfSampleType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SampleType" nillable="true" type="tns:SampleType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSampleType" nillable="true" type="tns:ArrayOfSampleType" />
+  <xs:complexType name="SampleType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="SampleTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SampleId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TraitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LCL" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UCL" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SampleType" nillable="true" type="tns:SampleType" />
+  <xs:complexType name="SyncUser">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:User">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserAccessibleSampleIdentifiers" nillable="true" type="tns:ArrayOfMaterialSampleIdentifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SyncUser" nillable="true" type="tns:SyncUser" />
+  <xs:complexType name="ArrayOfMaterialSampleIdentifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MaterialSampleIdentifier" nillable="true" type="tns:MaterialSampleIdentifier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMaterialSampleIdentifier" nillable="true" type="tns:ArrayOfMaterialSampleIdentifier" />
+  <xs:complexType name="MaterialSampleIdentifier">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Material">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SampleIdentifiers" nillable="true" type="tns:ArrayOfSampleIdentifier" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MaterialSampleIdentifier" nillable="true" type="tns:MaterialSampleIdentifier" />
+  <xs:complexType name="ArrayOfSampleIdentifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SampleIdentifier" nillable="true" type="tns:SampleIdentifier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSampleIdentifier" nillable="true" type="tns:ArrayOfSampleIdentifier" />
+  <xs:complexType name="SampleIdentifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsDropDown" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsRequired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNumeric" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayOrder" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SampleIdentifier" nillable="true" type="tns:SampleIdentifier" />
+  <xs:complexType name="ArrayOfAlert">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Alert" nillable="true" type="tns:Alert" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAlert" nillable="true" type="tns:ArrayOfAlert" />
+  <xs:complexType name="Alert">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateId" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Language" type="tns:EnumLanguage" />
+      <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Alert" nillable="true" type="tns:Alert" />
+  <xs:simpleType name="EnumLanguage">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ENGLISH" />
+      <xs:enumeration value="GERMAN" />
+      <xs:enumeration value="SPANISH" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EnumLanguage" nillable="true" type="tns:EnumLanguage" />
+  <xs:complexType name="Error">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Error" nillable="true" type="tns:Error" />
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimeStamp" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LocationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpectrometerSerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaterialName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubCategoryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PresentationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SampleClassName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AnalysisId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SampleId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfResultDetail" />
+      <xs:element minOccurs="0" name="Identifiers" nillable="true" type="tns:ArrayOfResultIdentifier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result" />
+  <xs:complexType name="ArrayOfResultDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResultDetail" nillable="true" type="tns:ResultDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResultDetail" nillable="true" type="tns:ArrayOfResultDetail" />
+  <xs:complexType name="ResultDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TraitName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuantFileVersion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UpperBusinessRuleTestValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LowerBusinessRuleTestValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="BusinessRuleText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TestStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="DisplayText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultDetail" nillable="true" type="tns:ResultDetail" />
+  <xs:complexType name="ArrayOfResultIdentifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResultIdentifier" nillable="true" type="tns:ResultIdentifier" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResultIdentifier" nillable="true" type="tns:ArrayOfResultIdentifier" />
+  <xs:complexType name="ResultIdentifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Attribute" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultIdentifier" nillable="true" type="tns:ResultIdentifier" />
+</xs:schema>

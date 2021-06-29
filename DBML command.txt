@@ -1,0 +1,14 @@
+SqlMetal.exe "C:\code\fred\Cognis\Main\src\InstrumentUI\InstrumentUI\DataAccess\InstrumentUIDB.sdf"  /dbml:"C:\code\fred\Cognis\Main\src\InstrumentUI\InstrumentUI\DataAccess\InstrumentUIDB.dbml" /password:admin123 /namespace:InstrumentUI.DataAccess /pluralize /context:InstrumentUIDataContext
+
+
+set sdf=C:\code\fred\Cognis\Main\src\InstrumentUI\InstrumentUI\DataAccess\InstrumentUIDB.sdf
+set class=InstrumentUIDB
+   
+c:\data\sqlce\bin\exportsqlce40 "Data Source=%sdf%" c:\temp\temp.sqlce schemaonly
+del c:\temp\%class%.sdf
+   
+c:\data\sqlce\sqlcecmd -d"Data Source=C:\temp\%class%.sdf" -e create -n
+c:\data\sqlce\sqlcecmd -d"Data Source=C:\temp\%class%.sdf" -i c:\temp\temp.sqlce –n
+   
+sqlmetal /code:%class%.cs C:\temp\%class%.sdf
+

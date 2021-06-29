@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="InstrumentUIDB" EntityNamespace="InstrumentUI_ATK.DataAccess" ContextNamespace="InstrumentUI_ATK.DataAccess" Class="InstrumentUIDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="AdminPreferences">
+    <Type Name="AdminPreference">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Language" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SoundsOn" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AutoSampleId" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AutoPrint" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AppVersion" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ManualBackground" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LogoFilePath" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AlgorithamVersion" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ReportDirectory" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AddressOnReportLine1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AddressOnReportLine2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DefaultReport" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SpeedMode" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SpeedModeDualScan" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="CacheSample" Member="CacheSamples">
+    <Type Name="CacheSample">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaterialId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubCategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PresentationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Traits" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="SampleType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="CacheSampleIdentifiers">
+    <Type Name="CacheSampleIdentifier">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="SampleType" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="MacroFiles">
+    <Type Name="MacroFile">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SpectTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="RecordedSampleIdentifiers">
+    <Type Name="RecordedSampleIdentifier">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaterialId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ResultDetail" Member="ResultDetails">
+    <Type Name="ResultDetail">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RequestId" Type="System.String" DbType="NVarChar(38) NOT NULL" CanBeNull="false" />
+      <Column Name="ModelGroupName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QuantFileVersion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpperBRTestValue" Type="System.Decimal" DbType="Decimal(15,6)" CanBeNull="true" />
+      <Column Name="LowerBRTestValue" Type="System.Decimal" DbType="Decimal(15,6)" CanBeNull="true" />
+      <Column Name="TestStatusDesc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BusRuleText" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ReqOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayText" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ResultHeader" Member="ResultHeaders">
+    <Type Name="ResultHeader">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RequestId" Type="System.String" DbType="NVarChar(38) NOT NULL" CanBeNull="false" />
+      <Column Name="TimeStamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LocationName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SpectSN" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TestStatusDesc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PresDesc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaterialDesc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryDesc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SCDesc" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SampleClass" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AnalysisId" Type="System.String" DbType="NVarChar(39) NOT NULL" CanBeNull="false" />
+      <Column Name="SampleId" Type="System.String" DbType="NVarChar(39) NOT NULL" CanBeNull="false" />
+      <Column Name="LocalTimeStamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ResultIdentifiers">
+    <Type Name="ResultIdentifier">
+      <Column Name="Id" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RequestId" Type="System.String" DbType="NVarChar(38) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AttribValue" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="SampleClasses">
+    <Type Name="SampleClass">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="SampleIdentifiers">
+    <Type Name="SampleIdentifier">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaterialId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Required" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Numeric" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DropDown" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MultiValues" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SampleTypes">
+    <Type Name="SampleType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SampleId" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SampleTypeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TraitName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LCL" Type="System.Decimal" DbType="Decimal(9,4)" CanBeNull="true" />
+      <Column Name="UCL" Type="System.Decimal" DbType="Decimal(9,4)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="SpectrometerTypes">
+    <Type Name="SpectrometerType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SerialNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StdXPMFileId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StdXPMFileName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="WFFileId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WFFileName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Traits">
+    <Type Name="Trait">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MaterialId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaterialName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SubcategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubcategoryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PresentationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PresentationName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModelGroupStageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModelGroupStageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="XPMFileId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="XPMFileName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="HomogeneityCheck" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MGOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaterialCode" Type="System.String" DbType="NVarChar(3)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LocationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LocationName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BackgroundTTL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WarmParam" Type="System.Decimal" DbType="Decimal(6,3)" CanBeNull="true" />
+      <Column Name="CleanParam" Type="System.Decimal" DbType="Decimal(6,3)" CanBeNull="true" />
+      <Column Name="LCode" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

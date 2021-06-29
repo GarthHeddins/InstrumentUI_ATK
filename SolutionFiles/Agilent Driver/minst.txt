@@ -1,0 +1,5 @@
+// Interface settings
+if=usb
+;if=bt
+# COM Port for Bluetooth (only used if if=bt)
+port=0

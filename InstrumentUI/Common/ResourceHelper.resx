@@ -1,0 +1,1173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="Analyze" xml:space="preserve">
+    <value>Analyze</value>
+  </data>
+  <data name="Auto_Sampler" xml:space="preserve">
+    <value>AutoSampler</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Chat</value>
+  </data>
+  <data name="Check" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="This_Is_Check_Sample" xml:space="preserve">
+    <value>This is a Check Sample</value>
+  </data>
+  <data name="ClearAll" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+  <data name="Click" xml:space="preserve">
+    <value>Click</value>
+  </data>
+  <data name="Click_Here" xml:space="preserve">
+    <value>Click here.</value>
+  </data>
+  <data name="Control_Chart" xml:space="preserve">
+    <value>Control Chart</value>
+  </data>
+  <data name="C_Of_A" xml:space="preserve">
+    <value>C of A</value>
+  </data>
+  <data name="Delete_Results" xml:space="preserve">
+    <value>Delete Results</value>
+  </data>
+  <data name="Demo" xml:space="preserve">
+    <value>Demo</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>The system has experienced an unexpected error.  Log out of the application and try again.</value>
+  </data>
+  <data name="Error_Invalid_Password" xml:space="preserve">
+    <value>Invalid Password.</value>
+  </data>
+  <data name="Error_Invalid_User_Name" xml:space="preserve">
+    <value>Invalid User Name.</value>
+  </data>
+  <data name="Error_Invalid_User_Name_Or_Password" xml:space="preserve">
+    <value>Invalid User Name or Password.</value>
+  </data>
+  <data name="Feasibility" xml:space="preserve">
+    <value>Feasibility</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>here</value>
+  </data>
+  <data name="Historical" xml:space="preserve">
+    <value>Historical</value>
+  </data>
+  <data name="Identify" xml:space="preserve">
+    <value>Identify</value>
+  </data>
+  <data name="Identify_Sample" xml:space="preserve">
+    <value>Identify Sample</value>
+  </data>
+  <data name="Insert_Previous" xml:space="preserve">
+    <value>Insert Previous</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Material_Type" xml:space="preserve">
+    <value>Material Type</value>
+  </data>
+  <data name="Next_Sample" xml:space="preserve">
+    <value>Next Sample</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Preferences" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Presentation" xml:space="preserve">
+    <value>Presentation</value>
+  </data>
+  <data name="Previous_Results" xml:space="preserve">
+    <value>Previous Results</value>
+  </data>
+  <data name="QTA" xml:space="preserve">
+    <value>QTA</value>
+  </data>
+  <data name="Quality_Trait_Analysis" xml:space="preserve">
+    <value>Quality Trait Analysis</value>
+  </data>
+  <data name="Remember_Me" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="Repeat_Sample" xml:space="preserve">
+    <value>Repeat Sample</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="RoundRobin" xml:space="preserve">
+    <value>RoundRobin</value>
+  </data>
+  <data name="Routine" xml:space="preserve">
+    <value>Routine</value>
+  </data>
+  <data name="R_n_D" xml:space="preserve">
+    <value>R&amp;&amp;D</value>
+  </data>
+  <data name="Scheduled" xml:space="preserve">
+    <value>Scheduled</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="Select_Material" xml:space="preserve">
+    <value>Select Material</value>
+  </data>
+  <data name="SetUp" xml:space="preserve">
+    <value>Set Up</value>
+  </data>
+  <data name="Single_Analysis" xml:space="preserve">
+    <value>Single Analysis</value>
+  </data>
+  <data name="SubCategory" xml:space="preserve">
+    <value>Subcategory</value>
+  </data>
+  <data name="Submit_Data" xml:space="preserve">
+    <value>Submit Data</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="Sync_Display_1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Sync_Display_2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Sync_Display_3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Sync_Display_4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Sync_Error" xml:space="preserve">
+    <value>An error occurred during synchronization.</value>
+  </data>
+  <data name="Sync_Status_1" xml:space="preserve">
+    <value>Checking for configuration updates...</value>
+  </data>
+  <data name="Sync_Status_2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="Test_Count" xml:space="preserve">
+    <value>Test Count</value>
+  </data>
+  <data name="Traits" xml:space="preserve">
+    <value>Traits</value>
+  </data>
+  <data name="Trend_Graph" xml:space="preserve">
+    <value>Trend Graph</value>
+  </data>
+  <data name="Trouble_Logging" xml:space="preserve">
+    <value>Trouble Logging in?</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="User_Name" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="Validation" xml:space="preserve">
+    <value>Validation</value>
+  </data>
+  <data name="Auto_Print" xml:space="preserve">
+    <value>Auto Print</value>
+  </data>
+  <data name="Auto_Sample_Id" xml:space="preserve">
+    <value>Autogenerate a Sample ID</value>
+  </data>
+  <data name="Change_Password" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Sound_On" xml:space="preserve">
+    <value>Sound On</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="To_Change_Password" xml:space="preserve">
+    <value>to change your password.</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Console_Start_Up" xml:space="preserve">
+    <value>System Start Up</value>
+  </data>
+  <data name="Console_Start_Up_Status" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Material" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="Please_Specify" xml:space="preserve">
+    <value>Please specify</value>
+  </data>
+  <data name="Must_Integer" xml:space="preserve">
+    <value>Entry must be  an integer.</value>
+  </data>
+  <data name="You_Have_Alerts" xml:space="preserve">
+    <value>You Have Alerts</value>
+  </data>
+  <data name="Your_QTA_Alerts" xml:space="preserve">
+    <value>Your QTA Alerts</value>
+  </data>
+  <data name="Error_10101" xml:space="preserve">
+    <value>Unable to login to QTA.  Verify your user name and  password are correct.</value>
+  </data>
+  <data name="Error_10100" xml:space="preserve">
+    <value>Unable to contact the QTA server.  Verify the internet connection.
+
+ID:  10100</value>
+  </data>
+  <data name="Confirm_Password" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="Error_10003" xml:space="preserve">
+    <value>Unable to save files files locally.
+
+ID:  10003</value>
+  </data>
+  <data name="New_Password" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="Error_Invalid_Confirm_Password" xml:space="preserve">
+    <value>New Password and Confirm Password do not match.</value>
+  </data>
+  <data name="Error_Invalid_New_Password" xml:space="preserve">
+    <value>Invalid New Password.</value>
+  </data>
+  <data name="Add_Algo_Version" xml:space="preserve">
+    <value>Add method number to reports</value>
+  </data>
+  <data name="Add_Logo" xml:space="preserve">
+    <value>Add Logo</value>
+  </data>
+  <data name="Customize" xml:space="preserve">
+    <value>Customize</value>
+  </data>
+  <data name="Default_Report" xml:space="preserve">
+    <value>Default Report</value>
+  </data>
+  <data name="Default_Report_Dir" xml:space="preserve">
+    <value>Default Report Folder</value>
+  </data>
+  <data name="Email_Options" xml:space="preserve">
+    <value>Email Options</value>
+  </data>
+  <data name="Go" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="Instrument_Diagnostics" xml:space="preserve">
+    <value>Instrument Diagnostics</value>
+  </data>
+  <data name="Mail_To" xml:space="preserve">
+    <value>Mail to</value>
+  </data>
+  <data name="Manual_Bkg" xml:space="preserve">
+    <value>Take Manual Background</value>
+  </data>
+  <data name="Report_Address" xml:space="preserve">
+    <value>Address on Report</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Version_Text" xml:space="preserve">
+    <value>This version of QTA is</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="Data_Saved" xml:space="preserve">
+    <value>Data saved successfully.</value>
+  </data>
+  <data name="Password_Changed" xml:space="preserve">
+    <value>Password changed successfully.</value>
+  </data>
+  <data name="Password_Change_Failed" xml:space="preserve">
+    <value>Failed to change password.</value>
+  </data>
+  <data name="Culture_Error" xml:space="preserve">
+    <value>The language option selected is not available.  Please select another, or the default English will be used.</value>
+  </data>
+  <data name="Additional_Assistance_Message" xml:space="preserve">
+    <value>For additional assistance, please call </value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="Error_10004" xml:space="preserve">
+    <value>Unable to contact the QTA server.  Verify the internet connection.
+
+ID:  10004</value>
+  </data>
+  <data name="Error_10005" xml:space="preserve">
+    <value>Unable to contact the QTA server.  Verify the internet connection.
+
+ID:  10005</value>
+  </data>
+  <data name="Error_10212" xml:space="preserve">
+    <value>Unable to save the most recent configuration.  Log out of the application and try again.
+
+ID:  10212</value>
+  </data>
+  <data name="Error_10213" xml:space="preserve">
+    <value>Unable to save the most recent configuration.  Log out of the application and try again.
+
+ID:  10213</value>
+  </data>
+  <data name="Error_10214" xml:space="preserve">
+    <value>Unable to save the most recent configuration.  Log out of the application and try again.
+
+ID:  10214</value>
+  </data>
+  <data name="Error_10215" xml:space="preserve">
+    <value>Unable to save the most recent configuration.  Log out of the application and try again.
+
+ID:  10215</value>
+  </data>
+  <data name="Error_10216" xml:space="preserve">
+    <value>Unable to save the most recent configuration.  Log out of the application and try again.
+
+ID:  10216</value>
+  </data>
+  <data name="Error_10217" xml:space="preserve">
+    <value>Unable to access necessary folders on the computer.  Log out of the application and try again.
+
+ID:  10217</value>
+  </data>
+  <data name="Error_10218" xml:space="preserve">
+    <value>Configuration of the system did not complete. Log out of the application and try again.
+
+ID:  10218</value>
+  </data>
+  <data name="Error_10401" xml:space="preserve">
+    <value>Unable to retrieve the necessary configuration information.  Log out of the application and try again.
+
+ID:  10401</value>
+  </data>
+  <data name="Error_10402" xml:space="preserve">
+    <value>Select at least one trait before continuing</value>
+  </data>
+  <data name="Error_10403" xml:space="preserve">
+    <value>Unable to retrieve the necessary configuration information.  Log out of the application and try again.
+
+ID:  10403</value>
+  </data>
+  <data name="Error_10501" xml:space="preserve">
+    <value>Unable to retrieve the necessary configuration information.  Log out of the application and try again.
+
+ID:  10501</value>
+  </data>
+  <data name="Error_10502" xml:space="preserve">
+    <value>A valid value for the [0] field is required.</value>
+  </data>
+  <data name="Analysis_ID" xml:space="preserve">
+    <value>Analysis ID</value>
+  </data>
+  <data name="Result_For" xml:space="preserve">
+    <value>Results For</value>
+  </data>
+  <data name="Error_10000" xml:space="preserve">
+    <value>Unable to contact the QTA server.  Verify the internet connection.  Log out of the application and try again.</value>
+  </data>
+  <data name="Error_10001" xml:space="preserve">
+    <value>Unable to contact the QTA server.  Verify the internet connection.
+
+ID:  10001</value>
+  </data>
+  <data name="Error_10002" xml:space="preserve">
+    <value>There was a problem connecting to the instrument.  Verify the instrument is powered on and connected to the computer with a crossover cable.  Verify network access is configured properly.  Log out of the application and try again.
+
+ID:  10002</value>
+  </data>
+  <data name="Error_10200" xml:space="preserve">
+    <value>Unable to contact the QTA server.  Verify the internet connection.
+
+ID:  10200</value>
+  </data>
+  <data name="Error_10201" xml:space="preserve">
+    <value>Unable to retrieve the most recent configuration.  Log out of the application and try again.
+
+ID:  10201</value>
+  </data>
+  <data name="Error_10202" xml:space="preserve">
+    <value>Unable to retrieve the most recent configuration.  Log out of the application and try again.
+
+ID:  10202</value>
+  </data>
+  <data name="Error_10203" xml:space="preserve">
+    <value>Unable to retrieve the most recent configuration.  Log out of the application and try again.
+
+ID:  10203</value>
+  </data>
+  <data name="Error_10204" xml:space="preserve">
+    <value>Unable to retrieve the most recent configuration.  Log out of the application and try again.
+
+ID:  10204</value>
+  </data>
+  <data name="Error_10205" xml:space="preserve">
+    <value>Unable to retrieve the most recent configuration.  Log out of the application and try again.
+
+ID:  10205</value>
+  </data>
+  <data name="Error_10206" xml:space="preserve">
+    <value>Unable to retrieve the most recent configuration.  Log out of the application and try again.
+
+ID:  10206</value>
+  </data>
+  <data name="Error_10211" xml:space="preserve">
+    <value>Unable to save the most recent configuration.  Log out of the application and try again.
+
+ID:  10211</value>
+  </data>
+  <data name="Error_10301" xml:space="preserve">
+    <value>Unable to access the instrument configuration.  Log out of the application and try again.
+
+ID:  10301</value>
+  </data>
+  <data name="Error_10302" xml:space="preserve">
+    <value>Initialization did not complete. Verify the instrument is powered up and connected to the computer.  Log out of the application and try again.
+
+ID:  10302</value>
+  </data>
+  <data name="Error_10303" xml:space="preserve">
+    <value>Unable to retrieve the instrument serial number.  Log out of the application and try again.
+
+ID:  10303</value>
+  </data>
+  <data name="Error_10304" xml:space="preserve">
+    <value>Instrument must warm up prior to use.  Please wait a minimum of 30 minutes.  Log out of the application and try again.
+
+ID:  10304</value>
+  </data>
+  <data name="Error_10305" xml:space="preserve">
+    <value>Instrument diagnostics indicate a possible problem with the instrument light source.   Log out of the application, turn the instrument off for 30 seconds, restart, and try again.
+
+ID:  10305</value>
+  </data>
+  <data name="Error_10306" xml:space="preserve">
+    <value>Unable to save local files.  Log out of the application and try again.
+
+ID:  10306</value>
+  </data>
+  <data name="Error_10307" xml:space="preserve">
+    <value>Unable to connect to the instrument.  Verify the instrument is powered up.  Check the cable connection.  Log out of the application and try again.
+
+ID:  10307</value>
+  </data>
+  <data name="Error_10601" xml:space="preserve">
+    <value>Unable to retrieve the necessary configuration information.  Log out of the application and try again.
+
+ID:  10601</value>
+  </data>
+  <data name="Error_10602" xml:space="preserve">
+    <value>Unable to save results locally.  Log out of the application and try again.
+
+ID:  10602</value>
+  </data>
+  <data name="Error_10603" xml:space="preserve">
+    <value>Unable to contact the QTA server.  Verify the internet connection.
+
+ID:  10603</value>
+  </data>
+  <data name="Error_10604" xml:space="preserve">
+    <value>The sample is not homogeneous.  Obtain a  homogeneous sample and try again.</value>
+  </data>
+  <data name="Error_10605" xml:space="preserve">
+    <value>Sample surface is dirty.  Clean the surface and try again.
+
+ID:  10605</value>
+  </data>
+  <data name="Error_10606" xml:space="preserve">
+    <value>Sample is not homogenous.  Try again with a new sample.
+
+ID:  10606</value>
+  </data>
+  <data name="Error_10607" xml:space="preserve">
+    <value>Sample surface is dirty.  Clean the surface and try again.
+
+ID:  10607</value>
+  </data>
+  <data name="Error_10608" xml:space="preserve">
+    <value>An error occurred processing the spectral file .  Try again with another sample.
+
+ID:  10608</value>
+  </data>
+  <data name="Error_10609" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10609</value>
+  </data>
+  <data name="Error_10610" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10610</value>
+  </data>
+  <data name="Error_10611" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10611</value>
+  </data>
+  <data name="Error_10612" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10612</value>
+  </data>
+  <data name="Error_10613" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10613</value>
+  </data>
+  <data name="Error_10614" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10614</value>
+  </data>
+  <data name="Error_10615" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10615</value>
+  </data>
+  <data name="Error_10616" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10616</value>
+  </data>
+  <data name="Error_10617" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10617</value>
+  </data>
+  <data name="Error_10618" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10618</value>
+  </data>
+  <data name="Error_10619" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10619</value>
+  </data>
+  <data name="Error_10620" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10620</value>
+  </data>
+  <data name="Error_10621" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10621</value>
+  </data>
+  <data name="Error_10622" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10622</value>
+  </data>
+  <data name="Error_10623" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10623</value>
+  </data>
+  <data name="Error_10624" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10624</value>
+  </data>
+  <data name="Error_10625" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10625</value>
+  </data>
+  <data name="Error_10626" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10626</value>
+  </data>
+  <data name="Error_10627" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10627</value>
+  </data>
+  <data name="Error_10628" xml:space="preserve">
+    <value>An error occurred during analysis.  Try again.
+
+ID:  10628</value>
+  </data>
+  <data name="Error_10629" xml:space="preserve">
+    <value>An error occurred while scanning a manual background.  Try again.
+
+ID:  10629</value>
+  </data>
+  <data name="Error_10630" xml:space="preserve">
+    <value>An error occurred while scanning a manual background.  Try again.
+
+ID:  10630</value>
+  </data>
+  <data name="Error_10701" xml:space="preserve">
+    <value>Unable to load results.  Try again.
+
+ID:  10701</value>
+  </data>
+  <data name="Error_10702" xml:space="preserve">
+    <value>Unable to print results.  Verify a default printer is setup for this computer.  Try again.
+
+ID:  10702</value>
+  </data>
+  <data name="Error_10703" xml:space="preserve">
+    <value>Unable to email results.  Verify an email package is setup on this computer.  Try again.
+
+ID:  10703</value>
+  </data>
+  <data name="Error_10704" xml:space="preserve">
+    <value>Unable to save results.  Verify access to the folder where results are saved.  Try again.
+
+ID:  10704</value>
+  </data>
+  <data name="Error_10801" xml:space="preserve">
+    <value>An error occurred with the admin tool.  Try again.
+
+ID:  10801</value>
+  </data>
+  <data name="Error_10802" xml:space="preserve">
+    <value>An error occurred while scanning a manual background.  Try again.
+
+ID:  10802</value>
+  </data>
+  <data name="Error_10803" xml:space="preserve">
+    <value>An error occurred running the report.  Try again.
+
+ID:  10803</value>
+  </data>
+  <data name="Error_10804" xml:space="preserve">
+    <value>An error occurred accessing the help topic.  Try again.
+
+ID:  10804</value>
+  </data>
+  <data name="Error_10901" xml:space="preserve">
+    <value>An error occurred processing the sample at the QTA servers.  Try again.
+
+ID:  10901</value>
+  </data>
+  <data name="Delete_Results_Success" xml:space="preserve">
+    <value>Results deleted successfully.</value>
+  </data>
+  <data name="Analytical_Results" xml:space="preserve">
+    <value>Analytical Results</value>
+  </data>
+  <data name="Sample_ID" xml:space="preserve">
+    <value>Sample ID</value>
+  </data>
+  <data name="Workflow_Title" xml:space="preserve">
+    <value>Running Workflow, Please Wait ...</value>
+  </data>
+  <data name="Cancel_Message" xml:space="preserve">
+    <value>Cancelling, please wait ...</value>
+  </data>
+  <data name="CTIFMessage" xml:space="preserve">
+    <value>Could not connect to the Instrument.
+
+Please exit out of this application, restart the Instrument, launch the application and retry.</value>
+  </data>
+  <data name="CTIMessage" xml:space="preserve">
+    <value>Connecting to Instrument ...</value>
+  </data>
+  <data name="CUFMessage" xml:space="preserve">
+    <value>No files or directory found.</value>
+  </data>
+  <data name="CUMessage" xml:space="preserve">
+    <value>Deleting all temporary files ...</value>
+  </data>
+  <data name="DCFMessage" xml:space="preserve">
+    <value>Instrument diagnostics failed to run successfully.  Click continue, power down the instrument for at least 30 seconds, restart the instrument, and wait 30 seconds until the instrument is ready.  Retry the application.  If the error continues to repeat call support.
+
+Error:  10305     Result:  </value>
+  </data>
+  <data name="DCMessage" xml:space="preserve">
+    <value>Checking instrument status</value>
+  </data>
+  <data name="GSNFMessage" xml:space="preserve">
+    <value>Could not retrieve Instrument's Serial Number.  This feature may not be supported for this instrument.</value>
+  </data>
+  <data name="GSNMessage" xml:space="preserve">
+    <value>Retrieving Instrument's Serial Number ...</value>
+  </data>
+  <data name="WUCFMessage" xml:space="preserve">
+    <value>Warm-up check failed to run successfully.  Click continue and wait until the instrument is warmed up sufficiently.  Retry the application.  If the error continues to repeat or if the instrument has been powered on more than 30 minutes, call support.
+
+Error:  10304     Result:  </value>
+  </data>
+  <data name="WUCMessage" xml:space="preserve">
+    <value>Running Warm Up Check Macro ...</value>
+  </data>
+  <data name="BGCMessage" xml:space="preserve">
+    <value>Checking Status of Background file ...</value>
+  </data>
+  <data name="BLOffMessage" xml:space="preserve">
+    <value>Analyzing Sample</value>
+  </data>
+  <data name="BLOnMessage" xml:space="preserve">
+    <value>Analyzing Sample</value>
+  </data>
+  <data name="CLMessage" xml:space="preserve">
+    <value>Analyzing Sample</value>
+  </data>
+  <data name="GSDFMessage" xml:space="preserve">
+    <value>Unable to retrieve spectral data.</value>
+  </data>
+  <data name="GSDMessage" xml:space="preserve">
+    <value>Retrieving Spectral Data ...</value>
+  </data>
+  <data name="LBMessage" xml:space="preserve">
+    <value>Loading Background File ...</value>
+  </data>
+  <data name="OLMessage" xml:space="preserve">
+    <value>Analyzing Sample</value>
+  </data>
+  <data name="RLOffMessage" xml:space="preserve">
+    <value>Analyzing Sample</value>
+  </data>
+  <data name="RLOnMessage" xml:space="preserve">
+    <value>Analyzing Sample</value>
+  </data>
+  <data name="SBMessage" xml:space="preserve">
+    <value>Analyzing Sample</value>
+  </data>
+  <data name="SCMessage" xml:space="preserve">
+    <value>Analyzing Sample</value>
+  </data>
+  <data name="SFMessage" xml:space="preserve">
+    <value>Sample Scan failed to run successfully.</value>
+  </data>
+  <data name="SMessage" xml:space="preserve">
+    <value>Scanning the Sample ...</value>
+  </data>
+  <data name="SNBMessage" xml:space="preserve">
+    <value>Scanning New Background ...</value>
+  </data>
+  <data name="SPMessage" xml:space="preserve">
+    <value>Place a Sample in Cup or Vial ...</value>
+  </data>
+  <data name="SPUIMessage" xml:space="preserve">
+    <value>Please place a sample on the sample surface.
+
+When done, click continue.</value>
+  </data>
+  <data name="SSFMessage" xml:space="preserve">
+    <value>Save Spectral File failed to run successfully.</value>
+  </data>
+  <data name="SSMessage" xml:space="preserve">
+    <value>Saving Spectral File ...</value>
+  </data>
+  <data name="USFMessage" xml:space="preserve">
+    <value>Unload Spectral File failed to run successfully.</value>
+  </data>
+  <data name="USMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Material_Required" xml:space="preserve">
+    <value>Please specify a material type</value>
+  </data>
+  <data name="Please_Call" xml:space="preserve">
+    <value>Please Call</value>
+  </data>
+  <data name="CFRMessage" xml:space="preserve">
+    <value>Checking for Results ...</value>
+  </data>
+  <data name="CXPFMessage" xml:space="preserve">
+    <value>An error occurred while retrieving spectral data.  Try again.</value>
+  </data>
+  <data name="CXPMessage" xml:space="preserve">
+    <value>Communicating with the QTA central processor</value>
+  </data>
+  <data name="SXPFMessage" xml:space="preserve">
+    <value>An error occurred during the analysis.</value>
+  </data>
+  <data name="SXPMessage" xml:space="preserve">
+    <value>Communicating with QTA Central Processor</value>
+  </data>
+  <data name="Login_Trouble_Message_1" xml:space="preserve">
+    <value>Please contact QTA at [0] </value>
+  </data>
+  <data name="Login_Trouble_Message_2" xml:space="preserve">
+    <value>or during business hours</value>
+  </data>
+  <data name="CCMessage" xml:space="preserve">
+    <value>Checking sample surface for cleanliness</value>
+  </data>
+  <data name="HCMessage" xml:space="preserve">
+    <value>Analyzing Sample</value>
+  </data>
+  <data name="CCFMessage" xml:space="preserve">
+    <value>Sample surface is dirty.  Clean the surface and try again.</value>
+  </data>
+  <data name="ALPHASPUIMessage" xml:space="preserve">
+    <value>Place a sample on the sample surface.
+
+When done, click continue.</value>
+  </data>
+  <data name="MIRSPUIMessage" xml:space="preserve">
+    <value>Please place a sample on the sample surface.
+
+When done, click continue.</value>
+  </data>
+  <data name="SGSPUIMessage" xml:space="preserve">
+    <value>Place the sample in the funnel, click continue and pull the T-handle when ready to begin scanning</value>
+  </data>
+  <data name="VECTORSPUIMessage" xml:space="preserve">
+    <value>Place the sample in the test tube holder.  Click continue to start the analysis</value>
+  </data>
+  <data name="MPASPUIMessage" xml:space="preserve">
+    <value>For sample presentation in a vial, place the sample on the surface lens or vial holder; for presentation in a 6 mm tube, place the sample in the tube holder.  (for accurate results, always leave a clean empty 6 mm tube in the tube holder when it is not in use).
+    
+    Click continue to start the analysis</value>
+  </data>
+  <data name="Changes_Saved" xml:space="preserve">
+    <value>Changes saved</value>
+  </data>
+  <data name="STCMessage" xml:space="preserve">
+    <value>Starting cup on instrument...</value>
+  </data>
+  <data name="HCFMessage" xml:space="preserve">
+    <value>Homogeneity Check failed...</value>
+  </data>
+  <data name="C_of_A_Report" xml:space="preserve">
+    <value>C of A Report</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>or</value>
+  </data>
+  <data name="Single_Analysis_Report" xml:space="preserve">
+    <value>Single Analysis Report</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Contact_Information" xml:space="preserve">
+    <value>Contact Information</value>
+  </data>
+  <data name="Diagnostics_Text_2" xml:space="preserve">
+    <value>to access instrument diagnostics</value>
+  </data>
+  <data name="Address_1" xml:space="preserve">
+    <value>Address 1</value>
+  </data>
+  <data name="Address_2" xml:space="preserve">
+    <value>Address 2</value>
+  </data>
+  <data name="WFPreResultsMessage" xml:space="preserve">
+    <value>Calculating Results, please wait ...</value>
+  </data>
+  <data name="WFScanBackgroundMessage" xml:space="preserve">
+    <value>Scanning Background, please wait ...</value>
+  </data>
+  <data name="WFScanSampleMessage" xml:space="preserve">
+    <value>Analyzing Sample, please wait ...</value>
+  </data>
+  <data name="Error_10503" xml:space="preserve">
+    <value>Unable to locate the XML file: {0}.  Application restarting.</value>
+  </data>
+  <data name="Workflow_ErrorMessageHeading" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="Workflow_MessageHeader" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Spectral_File_Missing" xml:space="preserve">
+    <value>Spectral file doesn't exists.</value>
+  </data>
+  <data name="ScanSample_Thread_Timeout" xml:space="preserve">
+    <value>Cancelling ...</value>
+  </data>
+  <data name="ScanNewBackground_Thread_Timeout" xml:space="preserve">
+    <value>Cancelling ...</value>
+  </data>
+  <data name="Remember_Username" xml:space="preserve">
+    <value>Remember Username</value>
+  </data>
+  <data name="Product_Update" xml:space="preserve">
+    <value>Product Update</value>
+  </data>
+  <data name="Product_Update_Message" xml:space="preserve">
+    <value>There is an updated version of the InstrumentUI_ATK is available. Please click OK to install it.</value>
+  </data>
+  <data name="SFD_Message" xml:space="preserve">
+    <value>Unable to delete the Spectral File.  Please log out and try again.</value>
+  </data>
+  <data name="SG_MissingBackground" xml:space="preserve">
+    <value>Background file is missing</value>
+  </data>
+  <data name="Error_10006" xml:space="preserve">
+    <value>The system has experienced an unexpected error connecting to the database. Try to repair the database from the Admin tab Support menu.</value>
+  </data>
+  <data name="InstanceRunningMessage" xml:space="preserve">
+    <value>There is another instance of InstrumentUI_ATK running. Do you want to close the existing process and start an new process?</value>
+  </data>
+  <data name="DCFMessageTitle" xml:space="preserve">
+    <value>Diagnostics Check Failed</value>
+  </data>
+  <data name="WUCFMessageTitle" xml:space="preserve">
+    <value>Warm-up Check Failed</value>
+  </data>
+  <data name="MultiScanRunCount" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="BPMessage" xml:space="preserve">
+    <value>Place a vial with sample into the sample holder.  Click continue when ready to proceed.</value>
+  </data>
+  <data name="BPUIMessage" xml:space="preserve">
+    <value>A background scan is required.  Place an empty vial in the sample holder, then click continue.</value>
+  </data>
+  <data name="SPMPAVMessage" xml:space="preserve">
+    <value>Ready for sample scan.  Place vial with sample into the sample holder, then click continue.</value>
+  </data>
+  <data name="SPMPAVUIMessage" xml:space="preserve">
+    <value>Ready for sample scan.  Place vial with sample into the sample holder, then click continue.</value>
+  </data>
+  <data name="AveragePrompt" xml:space="preserve">
+    <value>Verify the sample surface is clean and dry, then place a sample on the surface.</value>
+  </data>
+  <data name="AverageScans" xml:space="preserve">
+    <value>Average Scans</value>
+  </data>
+  <data name="CleanCheckBackgroundRequired" xml:space="preserve">
+    <value>The program needs to take a background spectrum. Please verify the surface is cleaned well and dry. Then click 'Continue'.</value>
+  </data>
+  <data name="Start_OPUS_Message" xml:space="preserve">
+    <value>The OPUS program is not running.  Please start OPUS prior to running QTA.</value>
+  </data>
+  <data name="AFMessage" xml:space="preserve">
+    <value>An error occurred while averaging samples.  Try again.</value>
+  </data>
+  <data name="AMessage" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AverageCleanCheckPrompt" xml:space="preserve">
+    <value>Place a sample on the surface.</value>
+  </data>
+  <data name="CleanCheckShortMsg" xml:space="preserve">
+    <value>Clean the surface.</value>
+  </data>
+  <data name="Error_11201" xml:space="preserve">
+    <value>The scheduled scans are more than the maximum allowed.
+
+Decrease the scans per hour for one or more sample points.</value>
+  </data>
+  <data name="Error_11202" xml:space="preserve">
+    <value>Complete all required fields before activating.</value>
+  </data>
+  <data name="Error_11203" xml:space="preserve">
+    <value>The [0] field is required.</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="ScheduledTime" xml:space="preserve">
+    <value>Scheduled Time</value>
+  </data>
+  <data name="QueuedScans" xml:space="preserve">
+    <value>Queued Scans</value>
+  </data>
+  <data name="RemoveButton" xml:space="preserve">
+    <value>X</value>
+    <comment>Text on Remove button on the Manage Queue form</comment>
+  </data>
+  <data name="StatusScanRemovedFromQueue" xml:space="preserve">
+    <value>Scheduled Scan Removed from Queue</value>
+    <comment>Status Message when Scheduled Scan Removed from Queue on the Manage Queue form</comment>
+  </data>
+  <data name="ScheduleSummary" xml:space="preserve">
+    <value>Schedule Summary</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Schedule</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="SampleLocation" xml:space="preserve">
+    <value>Sample Location</value>
+  </data>
+  <data name="UserField1" xml:space="preserve">
+    <value>User Field 1</value>
+  </data>
+  <data name="UserField2" xml:space="preserve">
+    <value>User Field 2</value>
+  </data>
+  <data name="ScansPerHour" xml:space="preserve">
+    <value>Scans per Hour</value>
+  </data>
+  <data name="SampleInterval" xml:space="preserve">
+    <value>Sample Interval</value>
+  </data>
+  <data name="Available" xml:space="preserve">
+    <value>Available</value>
+  </data>
+  <data name="ViewSummary" xml:space="preserve">
+    <value>View Summary</value>
+  </data>
+  <data name="ManageQueue" xml:space="preserve">
+    <value>Manage Queue</value>
+  </data>
+  <data name="TimeMinSec" xml:space="preserve">
+    <value>Time (min:sec)</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="SampleDate" xml:space="preserve">
+    <value>Sample Date</value>
+  </data>
+</root>

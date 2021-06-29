@@ -1,0 +1,110 @@
+;/*++
+;
+;Copyright (c) DLS Solutions  All rights reserved.
+;
+
+;Module Name:
+;
+;    mFTIR64.INF
+;
+;Abstract:
+;    Installation inf for the Agilent USB Board
+;
+;--*/
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=FTIR_Device
+ClassGuid={D5884B27-AC9B-4dec-8B37-ED8782C52E8B}
+Provider=%HdwrVendor%
+DriverVer=07/19/2011,1.0.4
+CatalogFile=mFTIR64.cat
+
+
+; ================= Class section =====================
+
+[ClassInstall32]
+Addreg=Class_AddReg     
+
+[Class_AddReg]
+HKR,,,0,%FTIR_ClassName%
+HKR,,Icon,,-5
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+; ================= Device section =====================
+
+[Manufacturer]
+%HdwrVendor%=SAS_Mfg,ntamd64
+
+; For XP and later
+[SAS_Mfg]
+%USB\VID_0FB4&PID_0201.DeviceDesc%=mFTIR.Dev, USB\VID_0FB4&PID_0201
+
+[SAS_Mfg.ntamd64]
+%USB\VID_0FB4&PID_0201.DeviceDesc%=mFTIR.Dev, USB\VID_0FB4&PID_0201
+
+[mFTIR.Dev.NT]
+CopyFiles=mFTIR.Files.Ext
+
+[mFTIR.Dev.NT.Services]
+Addservice = mFTIR, 0x00000002, mFTIR.AddService
+
+[mFTIR.AddService]
+DisplayName    = %mFTIR.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\mFTIR64.sys
+AddReg         = mFTIR.AddReg
+LoadOrderGroup = Base
+
+[mFTIR.AddReg]
+HKR,"Parameters","MaximumTransferSize",0x10001,65536
+HKR,"Parameters","DebugLevel",0x10001,2
+
+[mFTIR.Files.Ext]
+mFTIR64.sys
+
+[SourceDisksNames]
+1=%Disk_Description%,,,
+
+[SourceDisksFiles]
+mFTIR64.sys = 1
+
+;-------------- WDF Coinstaller installation
+[DestinationDirs]
+CoInstaller_CopyFiles = 11
+
+[mFTIR.Dev.NT.CoInstallers]
+AddReg=CoInstaller_AddReg
+CopyFiles=CoInstaller_CopyFiles
+
+[CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[SourceDisksFiles]
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[mFTIR.Dev.NT.Wdf]
+KmdfService = mFTIR, mFTIR_wdfsect
+
+[mFTIR_wdfsect]
+KmdfLibraryVersion = 1.9
+
+;---------------------------------------------------------------;
+
+[Strings]
+Disk_Description= "mFTIR Installation Disk"
+mFTIR.SvcDesc = "mFTIR Driver (WDF) for Agilent Technologies"
+
+HdwrVendor="Agilent Technologies"
+USB\VID_0FB4&PID_0201.DeviceDesc="Agilent Technologies Micro FTIR"
+FTIR_ClassName="FTIR Instrument"
+mFTIR_DeviceDesc="FTIR Analyzer"
+Micro.SvcDesc="Agilent Technologies USB Interface Driver (mFTIR.sys)"
+DiskName="Agilent Technologies mFTIR Driver (WDF) Disk"

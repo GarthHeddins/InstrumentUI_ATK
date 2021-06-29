@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4b2e3966-fdbd-4a98-a53f-50e0dac12fa2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://137.117.100.238:8080/InstrumentServices/InstrumentService.svc/mex/mex/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service2.wsdl" MetadataType="Wsdl" ID="d90e2a2d-3347-443e-80f0-c3e5974c0d0f" SourceId="1" SourceUrl="http://137.117.100.238:8080/InstrumentServices/InstrumentService.svc/mex/mex/mex" />
+    <MetadataFile FileName="service4.xsd" MetadataType="Schema" ID="1c4622a4-23f7-4b91-9883-605a9bc308c1" SourceId="1" SourceUrl="http://137.117.100.238:8080/InstrumentServices/InstrumentService.svc/mex/mex/mex" />
+    <MetadataFile FileName="QTA.Services.DataContracts2.xsd" MetadataType="Schema" ID="6e0cfba7-e4ec-42d6-801c-efe70607aefe" SourceId="1" SourceUrl="http://137.117.100.238:8080/InstrumentServices/InstrumentService.svc/mex/mex/mex" />
+    <MetadataFile FileName="service5.xsd" MetadataType="Schema" ID="ee2ec76a-42fc-42b1-a8c7-3e23e18fe66d" SourceId="1" SourceUrl="http://137.117.100.238:8080/InstrumentServices/InstrumentService.svc/mex/mex/mex" />
+    <MetadataFile FileName="Arrays11.xsd" MetadataType="Schema" ID="333c3734-cc88-467d-bbf7-a9e958acaee0" SourceId="1" SourceUrl="http://137.117.100.238:8080/InstrumentServices/InstrumentService.svc/mex/mex/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

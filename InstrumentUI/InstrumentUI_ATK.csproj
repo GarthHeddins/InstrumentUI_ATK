@@ -1,0 +1,1045 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F7C30F6-EEA7-4323-A591-D99A45B8C39F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InstrumentUI_ATK</RootNamespace>
+    <AssemblyName>InstrumentUI_ATK</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <ApplicationIcon>qta.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>8A8801D8073AD50DACCAB92BF62153BD809D1EB6</ManifestCertificateThumbprint>
+    <ManifestKeyFile>InstrumentUI_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <PublishUrl>http://localhost/InstrumentUI_ATK/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>InstrumentUI_ATK</ProductName>
+    <PublisherName>Eurofins QTA</PublisherName>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <StartupObject>InstrumentUI_ATK.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="QCChart2DNet">
+      <HintPath>..\..\..\Quinn-Curtis\DotNet\lib\QCChart2DNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Quartz, Version=2.5.0.0, Culture=neutral, PublicKeyToken=f6b8c98a402cc8a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Quartz.2.5.0\lib\net40\Quartz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChartControl.designer.cs">
+      <DependentUpon>ChartControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CommonEnums.cs" />
+    <Compile Include="Common\Extension.cs" />
+    <Compile Include="Common\Helper.cs" />
+    <Compile Include="Common\LambdaComparer.cs" />
+    <Compile Include="Common\MLDiag.cs" />
+    <Compile Include="Common\MLProgress.cs" />
+    <Compile Include="Common\NativeMethod.cs" />
+    <Compile Include="Common\ResourceHelper.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceHelper.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Sample.cs" />
+    <Compile Include="Common\ScheduleQueue.cs" />
+    <Compile Include="Common\ScheduledScanJob.cs" />
+    <Compile Include="Common\SharedCommonEnums.cs" />
+    <Compile Include="Controls\AlertMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AlertMessage.Designer.cs">
+      <DependentUpon>AlertMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomComboBox.Designer.cs">
+      <DependentUpon>CustomComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CustomFlowLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CustomFlowLayoutPanel.Designer.cs">
+      <DependentUpon>CustomFlowLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IdentifySample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\IdentifySample.Designer.cs">
+      <DependentUpon>IdentifySample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ResultBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ResultBoard.Designer.cs">
+      <DependentUpon>ResultBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ResultListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ResultListItem.Designer.cs">
+      <DependentUpon>ResultListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RibbonIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RibbonIcon.Designer.cs">
+      <DependentUpon>RibbonIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TableLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TableLayout.Designer.cs">
+      <DependentUpon>TableLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TraitCheck.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TraitCheck.Designer.cs">
+      <DependentUpon>TraitCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\DAL.cs" />
+    <Compile Include="DataAccess\InstrumentUIDB.cs">
+      <DependentUpon>InstrumentUIDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Model\IdName.cs" />
+    <Compile Include="DataAccess\Model\ScheduleItem.cs" />
+    <Compile Include="Common\ScheduleQueueItem.cs" />
+    <Compile Include="DataAccess\ScheduleDataSet.cs">
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ScheduleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\ScheduleRepository.cs" />
+    <Compile Include="FormControls\Analyze.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\Analyze.Designer.cs">
+      <DependentUpon>Analyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\Check.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\Check.Designer.cs">
+      <DependentUpon>Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\CofA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\CofA.Designer.cs">
+      <DependentUpon>CofA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\ConsoleStartUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\ConsoleStartUp.Designer.cs">
+      <DependentUpon>ConsoleStartUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\ChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\ChangePassword.designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\IFormControl.cs" />
+    <Compile Include="FormControls\PreviousResults.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\PreviousResults.Designer.cs">
+      <DependentUpon>PreviousResults.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\Result.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\Result.Designer.cs">
+      <DependentUpon>Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\Routine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\Routine.Designer.cs">
+      <DependentUpon>Routine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\ScheduleForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\ScheduleForm.Designer.cs">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\ScheduleQueueForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\ScheduleQueueForm.Designer.cs">
+      <DependentUpon>ScheduleQueueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\ScheduleSummaryForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\ScheduleSummaryForm.Designer.cs">
+      <DependentUpon>ScheduleSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\SetUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\SetUp.designer.cs">
+      <DependentUpon>SetUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\SingleAnalysis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\SingleAnalysis.Designer.cs">
+      <DependentUpon>SingleAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\Support.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\Support.designer.cs">
+      <DependentUpon>Support.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\Preferences.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\Preferences.designer.cs">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormControls\Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormControls\TrendGraphForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormControls\TrendGraphForm.designer.cs">
+      <DependentUpon>TrendGraphForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalForm\Alerts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalForm\Alerts.Designer.cs">
+      <DependentUpon>Alerts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalForm\ManualBackground.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalForm\ManualBackground.Designer.cs">
+      <DependentUpon>ManualBackground.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalForm\LoginTrouble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalForm\LoginTrouble.Designer.cs">
+      <DependentUpon>LoginTrouble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalForm\WorkflowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalForm\WorkflowForm.Designer.cs">
+      <DependentUpon>WorkflowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalForm\Phone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalForm\Phone.Designer.cs">
+      <DependentUpon>Phone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModalForm\MessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModalForm\MessageDialog.Designer.cs">
+      <DependentUpon>MessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChartControl.resx">
+      <DependentUpon>ChartControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ResourceHelper.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceHelper.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AlertMessage.resx">
+      <DependentUpon>AlertMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\IdentifySample.resx">
+      <DependentUpon>IdentifySample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ResultBoard.resx">
+      <DependentUpon>ResultBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ResultListItem.resx">
+      <DependentUpon>ResultListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RibbonIcon.resx">
+      <DependentUpon>RibbonIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TableLayout.resx">
+      <DependentUpon>TableLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TraitCheck.resx">
+      <DependentUpon>TraitCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataAccess\InstrumentUIDB.dbml.layout">
+      <DependentUpon>InstrumentUIDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="FormControls\Analyze.resx">
+      <DependentUpon>Analyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\CofA.resx">
+      <DependentUpon>CofA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\ConsoleStartUp.resx">
+      <DependentUpon>ConsoleStartUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\PreviousResults.resx">
+      <DependentUpon>PreviousResults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\Result.resx">
+      <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\ScheduleForm.resx">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\ScheduleQueueForm.resx">
+      <DependentUpon>ScheduleQueueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\ScheduleSummaryForm.resx">
+      <DependentUpon>ScheduleSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\SetUp.resx">
+      <DependentUpon>SetUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\SingleAnalysis.resx">
+      <DependentUpon>SingleAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\Support.resx">
+      <DependentUpon>Support.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\Preferences.resx">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControls\TrendGraphForm.resx">
+      <DependentUpon>TrendGraphForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalForm\Alerts.resx">
+      <DependentUpon>Alerts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalForm\ManualBackground.resx">
+      <DependentUpon>ManualBackground.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalForm\LoginTrouble.resx">
+      <DependentUpon>LoginTrouble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalForm\WorkflowForm.resx">
+      <DependentUpon>WorkflowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalForm\Phone.resx">
+      <DependentUpon>Phone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalForm\MessageDialog.resx">
+      <DependentUpon>MessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonTabs\RibbonTabAdmin.resx">
+      <DependentUpon>RibbonTabAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonTabs\RibbonTabAnalyze.resx">
+      <DependentUpon>RibbonTabAnalyze.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonTabs\RibbonTabReports.resx">
+      <DependentUpon>RibbonTabReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonTabs\RibbonTabSubmitData.resx">
+      <DependentUpon>RibbonTabSubmitData.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DataAccess\InstrumentUIDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InstrumentUIDB.dbml</DependentUpon>
+    </Compile>
+    <None Include="DataAccess\InstrumentUIDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>InstrumentUIDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DebugView\dbgview.chm" />
+    <None Include="job_scheduling_data_2_0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RibbonTabs\IRibbonTab.cs" />
+    <Compile Include="RibbonTabs\RibbonTabAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RibbonTabs\RibbonTabAdmin.designer.cs">
+      <DependentUpon>RibbonTabAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonTabs\RibbonTabAnalyze.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RibbonTabs\RibbonTabAnalyze.designer.cs">
+      <DependentUpon>RibbonTabAnalyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonTabs\RibbonTabReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RibbonTabs\RibbonTabReports.designer.cs">
+      <DependentUpon>RibbonTabReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonTabs\RibbonTabSubmitData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RibbonTabs\RibbonTabSubmitData.designer.cs">
+      <DependentUpon>RibbonTabSubmitData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\AgilentToolkit.cs" />
+    <Compile Include="Workflow\IAgilentToolKit.cs" />
+    <Compile Include="Workflow\WorkflowEventArgs.cs" />
+    <Compile Include="Workflow\StringValueEnum.cs" />
+    <Compile Include="Workflow\WorkflowParser.cs" />
+    <Compile Include="Workflow\WorkflowParserATK.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="Service References\DataService\Arrays11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataService\QTA.Services.DataContracts2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataService\service2.wsdl" />
+    <None Include="Service References\DataService\service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataService\service5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer-black&amp;white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-identifysample.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-telephone.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-help.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-routineanalysis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-identifysample1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-autosampler.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-scheduler.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-checksample.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-validation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-feasibility.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-roundrobin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previousresults-tab-inactive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-cofa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-singleanalysis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-tab-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-tabrow-tabinactive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-historical.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-previousresults.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-rnd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-testcount.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-trendgraph.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-supernav-logout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previousresults-tab-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-admin-preferences.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-admin-setup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-admin-support.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-demo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-routineanalysis1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-routineanalysis-active1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-controlchart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-admin-preferences-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-admin-setup-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-admin-support-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-autosampler-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-checksample-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-demo-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-feasibility-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-identifysample-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-roundrobin-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-routineanalysis-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-test-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-validation-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-cofa-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-controlchart-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-historical-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-rnd-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-singleanalysis-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-testcount-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-trendgraph-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header_1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header_2.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-analyze-scheduler-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-icon-reports-previousresults-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ribbon-upper-border.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-button-login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-whiteboxfortext.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\synchronizing-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\synchronizing-background-green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statusindicator-consolestartup.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consolestartup-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consolestartup-background-blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statusindicator-synchronizing.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Q2image_128.ico" />
+    <Content Include="Common\SoundFiles\ComputerError.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\SoundFiles\ElectronicChime.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataAccess\InstrumentUIDB.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DebugView\Dbgview.exe" />
+    <Content Include="DebugView\Eula.txt" />
+    <Content Include="qta.ico" />
+    <Content Include="Resources\admin-button-blank-large.jpg" />
+    <Content Include="Resources\admin-button-blank-small.jpg" />
+    <Content Include="Resources\admin-preferences-background.jpg" />
+    <Content Include="Resources\admin-setup-background.jpg" />
+    <Content Include="Resources\admin-support-background.jpg" />
+    <None Include="DataAccess\ScheduleDataSet.xsc">
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataAccess\ScheduleDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ScheduleDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataAccess\ScheduleDataSet.xss">
+      <DependentUpon>ScheduleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\alerts-background-on-darkblue.png" />
+    <Content Include="Resources\button-cancel-active.jpg" />
+    <Content Include="Resources\button-nextsample-active.jpg" />
+    <Content Include="Resources\button-repeatsample-active.jpg" />
+    <None Include="InstrumentUI_TemporaryKey.pfx" />
+    <None Include="Resources\cognis-traits-underline.jpg" />
+    <None Include="Resources\cognis-button-cancelpopup-active.jpg" />
+    <None Include="Resources\cognis-button-cancelpopup-active1.jpg" />
+    <None Include="Resources\header_1new.JPG" />
+    <None Include="Resources\cognis-popup-workflow-background.png" />
+    <None Include="Resources\icon-information.bmp" />
+    <None Include="Resources\icon-info.jpg" />
+    <None Include="Resources\icon-info.png" />
+    <Content Include="Resources\icon-negative.jpg" />
+    <Content Include="Resources\icon-plus.jpg" />
+    <Content Include="Resources\popup-phone-background.jpg" />
+    <None Include="Resources\report-coa-background.jpg" />
+    <None Include="Resources\reportarea-btn-submit.jpg" />
+    <None Include="Resources\report-single-analysis-background.jpg" />
+    <Content Include="Resources\reports-previousresults-background.jpg" />
+    <None Include="Resources\Results-Icons-CoA-Word.jpg" />
+    <None Include="Resources\Results-Icons-CoA-PDF.jpg" />
+    <Content Include="Resources\resultspage-icon-email.jpg" />
+    <Content Include="Resources\resultspage-icon-graph.jpg" />
+    <Content Include="Resources\resultspage-icon-msexcel.jpg" />
+    <Content Include="Resources\resultspage-icon-msword.jpg" />
+    <Content Include="Resources\resultspage-icon-pdf.jpg" />
+    <Content Include="Resources\resultspage-icon-print.jpg" />
+    <Content Include="Resources\ribbon-border.JPG" />
+    <Content Include="Resources\routine-analysisresults-background.jpg" />
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.Alert.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.ControlChartCriteriaWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.EnumResultStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.Error.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.ErrorLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.FavoriteReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.HistoricalCriteriaWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.HistoricalDataWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.HistoricalShowColumnWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.RDCriteriaWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.RDDataWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.RDHeaderDataWithSpectralFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.SampleCountData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.SyncUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.TestCount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.TestCountCriteriaWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.TransactionMonitorDataWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.TrendChartCriteriaWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.TrendChartDataWrapper.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.UpdateInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\InstrumentUI_ATK.DataService.UserWithReportRequest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DataService\QTA.Services.DataContracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataService\service.wsdl" />
+    <None Include="Service References\DataService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Resources\schedule-scan-running.png" />
+    <None Include="Service References\DataService\configuration91.svcinfo" />
+    <None Include="Service References\DataService\configuration.svcinfo" />
+    <None Include="Service References\DataService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="x86\sqlceca35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlcecompact35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceer35EN.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceme35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceoledb35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlceqp35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\sqlcese35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\routine-trait-background-bottom.JPG" />
+    <None Include="Resources\routine-trait-background-middle.JPG" />
+    <None Include="Resources\routine-trait-background-top.JPG" />
+    <None Include="Resources\statusindicator-workflow.gif" />
+    <None Include="Resources\icon-alert-warning01.jpg" />
+    <None Include="Resources\alerts-background.png" />
+    <None Include="Resources\icon-chat.jpg" />
+    <None Include="Resources\QTA-logo-upperleft.png" />
+    <None Include="Resources\routine-identifysample-background.jpg" />
+    <None Include="Resources\routine-traits-background.jpg" />
+    <None Include="Resources\routine-selectmaterial-background.jpg" />
+    <None Include="Resources\button-analyze-inactive.jpg" />
+    <None Include="Resources\button-analyze-active.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="Chart\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DataService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

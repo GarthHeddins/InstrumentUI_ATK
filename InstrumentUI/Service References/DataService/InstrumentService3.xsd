@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://rsi-dev-mohinder.india.rsystems.com/InstrumentServicesRelease/InstrumentService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" />
+  <xs:element name="GetSpectralFileData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requestIds" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpectralFileDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetSpectralFileDataResult" nillable="true" type="q1:ArrayOfRDHeaderDataWithSpectralFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetControlReportCriteriaData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetControlReportCriteriaDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetControlReportCriteriaDataResult" nillable="true" type="q2:ControlChartCriteriaWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetControlChartData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="locationId" type="xs:int" />
+        <xs:element minOccurs="0" name="sampleId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetControlChartDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetControlChartDataResult" nillable="true" type="q3:TrendChartDataWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultBySampleId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sampleId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultBySampleIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetResultBySampleIdResult" nillable="true" type="q4:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="AuthenticateUserResult" nillable="true" type="q5:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLoginTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLoginTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateLoginTimeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangePasswordResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSyncData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSyncDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetSyncDataResult" nillable="true" type="q6:SyncUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSyncStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSyncStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSyncStatusResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlerts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAlertsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetAlertsResult" nillable="true" type="q7:ArrayOfAlert" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendDataForAnalysis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlData" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="spectralFile" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendDataForAnalysisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendDataForAnalysisResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requestId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetResultStatusResult" type="q8:EnumResultStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requestId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultErrorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetResultErrorResult" nillable="true" type="q9:Error" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requestId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetResultResult" nillable="true" type="q10:Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="requestId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteResultResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogError">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stackTrace" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="errorNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="methodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="methodArgument" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogErrorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogErrorwithApplicationName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="stackTrace" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="errorNumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="methodName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="methodArgument" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sourceApplication" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogErrorwithApplicationNameResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHelpUrl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="helpCode" type="q11:EnumHelpCode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHelpUrlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHelpUrlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSAReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="requestId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="enumRequestIdType" type="q12:EnumRequestIdType" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="enumReportFormat" type="q13:EnumReportFormat" />
+        <xs:element minOccurs="0" name="sourceName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSAReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSAReportResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCOAReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="requestId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="enumRequestIdType" type="q14:EnumRequestIdType" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="enumReportFormat" type="q15:EnumReportFormat" />
+        <xs:element minOccurs="0" name="sourceName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCOAReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCOAReportResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrendReportData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="startAnalysisId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="locationId" type="xs:int" />
+        <xs:element minOccurs="0" name="materialId" type="xs:int" />
+        <xs:element minOccurs="0" name="categoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="subCategoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="identifierId" type="xs:int" />
+        <xs:element minOccurs="0" name="IdentifierVal" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrendReportDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetTrendReportDataResult" nillable="true" type="q16:TrendChartDataWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestCountReportData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="companyId" type="xs:int" />
+        <xs:element minOccurs="0" name="locationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestCountReportDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetTestCountReportDataResult" nillable="true" type="q17:ArrayOfTestCount" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrendReportCriteriaData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTrendReportCriteriaDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetTrendReportCriteriaDataResult" nillable="true" type="q18:TrendChartCriteriaWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestCountReportCriteriaData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestCountReportCriteriaDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetTestCountReportCriteriaDataResult" nillable="true" type="q19:TestCountCriteriaWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="AuthenticateTokenResult" nillable="true" type="q20:UserWithReportRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAuthenticateToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="uiCulture" nillable="true" type="xs:string" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="reportType" type="q21:EnumReportType" />
+        <xs:element minOccurs="0" name="spectralFileData" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="requestId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAuthenticateTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateAuthenticateTokenResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserReportHeader">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="customReportHeader" nillable="true" type="q22:CustomUserReportHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserReportHeaderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserReportHeaderResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateFavoriteReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="historicalCriteriaWrapper" nillable="true" type="q23:HistoricalCriteriaWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateFavoriteReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="CreateFavoriteReportResult" nillable="true" type="q24:HistoricalDataWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFavoriteReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="historicalCriteriaWrapper" nillable="true" type="q25:HistoricalCriteriaWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFavoriteReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="UpdateFavoriteReportResult" nillable="true" type="q26:HistoricalDataWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFavoriteReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reportId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFavoriteReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteFavoriteReportResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFavoriteReports">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFavoriteReportsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetFavoriteReportsResult" nillable="true" type="q27:ArrayOfFavoriteReport" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFavoriteReportCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element minOccurs="0" name="reportId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFavoriteReportCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetFavoriteReportCriteriaResult" nillable="true" type="q28:HistoricalCriteriaWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShowColumnsData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="reportId" type="xs:int" />
+        <xs:element minOccurs="0" name="locations" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="materials" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetShowColumnsDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetShowColumnsDataResult" nillable="true" type="q29:HistoricalShowColumnWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsUniqueFavoriteName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="favoriteName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsUniqueFavoriteNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsUniqueFavoriteNameResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRDReportCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRDReportCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetRDReportCriteriaResult" nillable="true" type="q30:RDCriteriaWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRDData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="rdCriteriaWrapper" nillable="true" type="q31:RDCriteriaWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRDDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/QTA.Services.DataContracts" minOccurs="0" name="GetRDDataResult" nillable="true" type="q32:RDDataWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

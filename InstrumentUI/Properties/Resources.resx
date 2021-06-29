@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_analyze_inactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button-analyze-inactive.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="synchronizing_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\synchronizing-logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-identifysample" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-identifysample.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resultspage_icon_msword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\resultspage-icon-msword.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resultspage_icon_email" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\resultspage-icon-email.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_whiteboxfortext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login-whiteboxfortext.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-checksample" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-checksample.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_trendgraph_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-trendgraph-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-reports-cofa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-cofa.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alerts_background_on_darkblue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alerts-background-on-darkblue.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-chat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-chat.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="header_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\header_2.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-plus.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cognis-traits-underline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cognis-traits-underline.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_trendgraph" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-trendgraph.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="consolestartup_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consolestartup-logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QTA_logo_upperleft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QTA-logo-upperleft.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="popup_phone_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\popup-phone-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-help.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_admin_setup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-admin-setup.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-scheduler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-scheduler.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_alert_warning01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-alert-warning01.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="routine_trait_background_bottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\routine-trait-background-bottom.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_admin_setup_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-admin-setup-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="routine_selectmaterial_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\routine-selectmaterial-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="admin_preferences_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin-preferences-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_controlchart_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-controlchart-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_tab_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-tab-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cognis_popup_workflow_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cognis-popup-workflow-background.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="routine_trait_background_top" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\routine-trait-background-top.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="admin_support_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin-support-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="synchronizing_background_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\synchronizing-background-green.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_repeatsample_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\button-repeatsample-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Results_Icons_CoA_PDF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Results-Icons-CoA-PDF.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="routine_analysisresults_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\routine-analysisresults-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Results_Icons_CoA_Word" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Results-Icons-CoA-Word.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="routine_traits_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\routine-traits-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_admin_support_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-admin-support-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_previousresults_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-previousresults-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cognis_admin_button_blank_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin-button-blank-small.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reportarea_btn_submit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reportarea-btn-submit.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-info.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-roundrobin-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-roundrobin-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-validation-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-validation-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_analyze_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\button-analyze-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-reports-singleanalysis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-singleanalysis.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_testcount" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-testcount.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_info1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-info.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_negative" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-negative.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_historical_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-historical-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="routine_identifysample_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\routine-identifysample-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_admin_preferences" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-admin-preferences.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-validation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-validation.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="previousresults-tab-inactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\previousresults-tab-inactive.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_controlchart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-controlchart.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resultspage_icon_msexcel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\resultspage-icon-msexcel.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_analyze_routineanalysis_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-routineanalysis-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_historical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-historical.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-roundrobin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-roundrobin.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resultspage_icon_graph" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\resultspage-icon-graph.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_admin_preferences_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-admin-preferences-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="statusindicator-workflow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statusindicator-workflow.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-reports-cofa-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-cofa-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resultspage_icon_pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\resultspage-icon-pdf.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="alerts_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\alerts-background.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="statusindicator_consolestartup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statusindicator-consolestartup.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_nextsample_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\button-nextsample-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_analyze_demo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-demo.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-feasibility-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-feasibility-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_supernav_logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-supernav-logout.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login_button_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login-button-login.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-identifysample-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-identifysample-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="report_coa_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\report-coa-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-test" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-test.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-test-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-test-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_analyze_routineanalysis1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-routineanalysis1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Printer-black&amp;white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Printer-black&amp;white.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_rnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-rnd.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_analyze_routineanalysis_active1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-routineanalysis-active1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="statusindicator_synchronizing" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\statusindicator-synchronizing.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="header_1new" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\header_1new.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-upper-border" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-upper-border.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_previousresults" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-previousresults.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-feasibility" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-feasibility.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="admin_setup_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin-setup-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-border" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-border.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="header_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\header_1.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-routineanalysis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-routineanalysis.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="routine_trait_background_middle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\routine-trait-background-middle.JPG;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-checksample-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-checksample-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="previousresults_tab_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\previousresults-tab-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cognis_admin_button_blank_large" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin-button-blank-large.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_analyze_demo_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-demo-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="report_single_analysis_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\report-single-analysis-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="consolestartup_background_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\consolestartup-background-blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_testcount_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-testcount-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resultspage_icon_print" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\resultspage-icon-print.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="reports_previousresults_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\reports-previousresults-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cognis-button-cancelpopup-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cognis-button-cancelpopup-active1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-scheduler-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-scheduler-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_reports_rnd_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-rnd-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-identifysample1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-identifysample1.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-reports-singleanalysis-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-reports-singleanalysis-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_icon_admin_support" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-admin-support.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-autosampler-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-autosampler-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon-icon-analyze-autosampler" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-icon-analyze-autosampler.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_cancel_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\button-cancel-active.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ribbon_tabrow_tabinactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ribbon-tabrow-tabinactive.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-telephone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-telephone.jpg;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="schedule-scan-running" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\schedule-scan-running.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
